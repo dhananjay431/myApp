@@ -14,6 +14,13 @@ class MyIndex extends CI_Controller {
 		$this->load->model('Usermodel');
 	echo json_encode($this->Usermodel->getUser());
 	}
+	public function url()
+	{
+		$a1=array("url"=>$this->load->helper('url'),
+		"base_url"=>$this->config->item('base_url'));
+		echo json_encode($a1);
+	}
+	
 }
 
 /* End of file welcome.php */
