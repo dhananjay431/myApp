@@ -7,11 +7,12 @@
 		      templateUrl: "public/home.html",
 		      controller: "homeCtrl"
 		    })
-/*		    .state('home.show', {
+		    .state('home.show', {
 		      url: "/show",
-		      templateUrl: "show.html",
-		//      controller: "homeCtrl"
+		      templateUrl: "public/show.html",
+		      controller: "showCtrl"
 		    })
+		    /*
 		    .state('home.showById', {
 		      url: "/showById/:id",
 		      templateUrl: "showById.html",
