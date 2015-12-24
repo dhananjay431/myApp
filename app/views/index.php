@@ -5,10 +5,16 @@
 	<script src="assets/js/angular-ui-router.min.js"></script>
 	<script src="assets/js/appJs/main.js"></script>
 	<script src="assets/js/appJs/myhome.js"></script>
-	<script src="assets/js/appJs/home/home.js"></script>
+	
 
-	<script src="assets/js/addDir/nav.js"></script>
-	<script src="assets/js/appJs/show/show.js"></script>
+
+
+
+
+	<script src="public/addDir/nav.js"></script>
+	<script src="public/home/home.js"></script>
+	<script src="public/show/show.js"></script>
+	
 	
 
 	

@@ -4,12 +4,13 @@
 		  $stateProvider
 		    .state('home', {
 		      url: "/home",
-		      templateUrl: "public/home.html",
+		      templateUrl: "public/home/home.html",
+
 		      controller: "homeCtrl"
 		    })
 		    .state('home.show', {
 		      url: "/show",
-		      templateUrl: "public/show.html",
+		      templateUrl: "public/show/show.html",
 		      controller: "showCtrl"
 		    })
 		    /*
