@@ -8,7 +8,7 @@ class Usermodel extends  CI_Model
     }
      function getUser()
     {
-    	$query = $this->db->query('SELECT * FROM users');
+    	$query = $this->db->query('SELECT * FROM emp');
     	return $query->result();
     }
 }

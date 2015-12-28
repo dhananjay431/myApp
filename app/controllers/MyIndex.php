@@ -5,14 +5,18 @@ class MyIndex extends CI_Controller {
 	{
 		$this->load->database();
 		$this->load->model('Usermodel');
-		return $this->Usermodel->getUser();
-		//$this->load->view('welcome_message');
+		$data=$this->Usermodel->getUser();
+		echo json_encode($data);
 	}
 	public function show()
 	{
 		$this->load->database();
 		$this->load->model('Usermodel');
-	echo json_encode($this->Usermodel->getUser());
+		echo json_encode($this->Usermodel->getUser());
+	}
+	public function show2($id)
+	{	
+		echo json_encode($id);
 	}
 	public function url()
 	{

@@ -39,7 +39,13 @@
 */
 
 $route['default_controller'] = "welcome";
+
+//http://localhost/myApp/index.php/MyIndex
+$route['show']="MyIndex/show";
+
+
 $route['404_override'] = '';
+
 
 
 /* End of file routes.php */
