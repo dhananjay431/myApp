@@ -8,15 +8,20 @@ class MyIndex extends CI_Controller {
 		$data=$this->Usermodel->getUser();
 		echo json_encode($data);
 	}
-	public function show()
+	public function all()
+	{
+		//total_rows=200&per_page=20
+		$this->load->database();
+		$this->load->model('Usermodel');
+		echo json_encode($this->Usermodel->all());
+
+	}
+	public function one($id)
 	{
 		$this->load->database();
 		$this->load->model('Usermodel');
-		echo json_encode($this->Usermodel->getUser());
-	}
-	public function show2($id)
-	{	
-		echo json_encode($id);
+		echo json_encode($this->Usermodel->one($id));	
+		
 	}
 	public function url()
 	{
