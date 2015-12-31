@@ -30,9 +30,15 @@ class Usermodel extends  CI_Model
     }
     public function bput($id,$data)
     {
-        
+        $this->db->trans_start();
         $this->db->where('id', $id);
         $this->db->update('emp', $data); 
+        $this->db->trans_complete();
+        if ($this->db->trans_status() === FALSE)
+    {
+            return FALSE;
+    }
+else
         return $this->one($id);
     }
 
