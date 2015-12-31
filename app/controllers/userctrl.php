@@ -33,10 +33,14 @@ class Userctrl extends CI_Controller {
 	}
 	public function bsave()
 	{
-		
 		$data=$this->userclass->rtran($this->input->get());
 		echo json_encode($this->Usermodel->bsave($data));
-
+	}
+	public function bput($id)
+	{
+		$data=$this->userclass->rtran($this->input->get());
+		echo json_encode($this->Usermodel->bput($id,$data));
+		//echo json_encode($this->Usermodel->bsave($data));
 	}
 
 }

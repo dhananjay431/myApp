@@ -13,7 +13,7 @@ class Userclass {
     public function tran($data)
     {
         return [
-        "ID"=> 'user_'.$data->id,
+        "USERID"=> $data->id,
         "NAME"=>$data->name,
         "SAL"=>$data->sal,
        // "TIME"=>$data->time

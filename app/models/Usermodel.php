@@ -28,7 +28,14 @@ class Usermodel extends  CI_Model
         $this->db->insert('emp', $data); 
         return $this->one($this->db->insert_id());
     }
-    /* transformer */
+    public function bput($id,$data)
+    {
+        
+        $this->db->where('id', $id);
+        $this->db->update('emp', $data); 
+        return $this->one($id);
+    }
+
     
 
 }
