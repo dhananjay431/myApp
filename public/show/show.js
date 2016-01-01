@@ -1,9 +1,14 @@
 		/*deriveCtrl*/
 		angular.module("myApp")
-		.controller("showCtrl",function($scope){
+		.controller("showCtrl",function($scope,bhttp){
 				$scope.data="showCtrl";
 
-
+			bhttp.dis('http://localhost/myApp/index.php/user2Ctrl/all')
+				.then(function(response){
+				  		console.log(response);
+				}, function(response){
+				  	console.log(response);
+				});
 
 								var map = new GMaps({
 							      el: '#map',
