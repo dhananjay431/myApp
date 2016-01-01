@@ -4,9 +4,23 @@ class Userctrl extends CI_Controller {
 	 public function __construct()
        {
             parent::__construct();
+
+              	//migration
+            	$this->load->library('migration');
+
+				if ( ! $this->migration->current())
+				{
+					show_error($this->migration->error_string());
+				}
+				//migration
+
+
+				
             	$this->load->database();
             	$this->load->model('Usermodel');
             	$this->load->library('userclass');
+
+          
             
        }
 	public function index()
