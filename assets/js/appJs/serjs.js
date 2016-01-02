@@ -1,18 +1,29 @@
 		angular.module("myApp")
 		.service('bhttp',function($q,$http){
 		var bobj={};
-		bobj.dis=function(url){
+		bobj.dis=function(method,url,data){
 			return $q(function(resolve, reject) 
 			  {
-						$http({
-							method: 'GET',
-						  	url: url
-							}).then(function successCallback(response){
+			  		if(method=="GET"){
+					$http.get(url).then(function successCallback(response){
 								resolve(response.data);
 						  	}, function errorCallback(response) {
 								reject(response.data);	    
 						});
+			  		}
+			  		if(method=='POST')
+			  		{
+			  		
+					$http.post(url,data).then(function successCallback(response){
+								resolve(response.data);
+						  	}, function errorCallback(response) {
+								reject(response.data);	    
+						});
+
+			  		}
+						
 			   });
+			  		
 		}
 		return bobj;
 	});

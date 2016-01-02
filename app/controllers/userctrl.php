@@ -31,6 +31,9 @@ class Userctrl extends CI_Controller {
 	public function all()
 	{
 		$resp=array();
+		//echo json_encode($this->security->get_csrf_token_name());
+		//echo json_encode($this->security->get_csrf_hash());
+		//return 0;
 		$data=$this->Usermodel->all();
 		echo json_encode($this->userclass->tranAll($data));
 
@@ -47,6 +50,11 @@ class Userctrl extends CI_Controller {
 	}
 	public function bsave()
 	{
+
+//		$this->security->xss_clean();
+		$filename = $this->security->sanitize_filename($this->input->post());
+		echo json_encode($filename);
+		return 0;
 		$data=$this->userclass->rtran($this->input->get());
 		echo json_encode($this->Usermodel->bsave($data));
 	}

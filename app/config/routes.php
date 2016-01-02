@@ -41,7 +41,9 @@
 $route['default_controller'] = "welcome";
 
 //http://localhost/myApp/index.php/MyIndex
-$route['show']['GET']="myIndex/show";
+$route['api/v1/user']="userCtrl/all";
+http://localhost/myApp/index.php/userCtrl/one/1
+$route['api/v1/user/(:num)']="/userCtrl/one/$1";
 
 
 $route['404_override'] = '';
