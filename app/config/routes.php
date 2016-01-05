@@ -45,6 +45,9 @@ $route['api/v1/user']="userCtrl/all";
 http://localhost/myApp/index.php/userCtrl/one/1
 $route['api/v1/user/(:num)']="/userCtrl/one/$1";
 
+//http://localhost/myApp/index.php/userctrl/token
+$route['token']="/userctrl/token";
+
 
 $route['404_override'] = '';
 
