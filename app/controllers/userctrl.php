@@ -53,7 +53,9 @@ class Userctrl extends CI_Controller {
 	{
 
 //		$this->security->xss_clean();
-		$filename = $this->security->sanitize_filename($this->input->post());
+		$filename = $this->input->post();
+		echo json_encode($filename);
+		return 0;
 		$data=$this->userclass->rtran($this->input->get());
 		echo json_encode($this->Usermodel->bsave($data));
 	}
