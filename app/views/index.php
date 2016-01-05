@@ -7,10 +7,12 @@
 	<script src="assets/js/appJs/myhome.js"></script>
 
 	<script src="assets/js/appJs/serjs.js"></script>
-	<!-- 
+	
 	<script src="http://maps.google.com/maps/api/js"></script>
-	 -->
+	 
+	 <!--
 	<script src="assets/js/appJs/gmap.js"></script> 
+	-->
 	<script src="assets/js/appJs/gmaps.js"></script>
 
 
